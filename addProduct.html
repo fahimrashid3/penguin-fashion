@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Penguin | Cart</title>
+    <title>Penguin | Add Product</title>
     <!-- tailwind css set up -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -25,7 +25,6 @@
       }
     </style>
   </head>
-
   <body class="bg-amber-50">
     <header>
       <nav
@@ -64,14 +63,58 @@
         </div>
       </nav>
     </header>
-    <body>
-      <div>
-        <h3 class="text-5xl font-bebas text-center my-5">Added Items</h3>
-        <!-- order card field -->
-        <div id="orderContainer"></div>
-      </div>
-    </body>
-    <script src="js/index.js"></script>
-    <script src="js/Cart.js"></script>
+    <main>
+      <h3 class="text-5xl font-bebas text-center my-5">Add New Product</h3>
+      <form class="mx-auto">
+        <div class="mx-8 md:mx-16 lg:mx-96 md:space-y-8">
+          <div class="md:flex gap-5">
+            <div class="w-full space-y-2">
+              <span class="text-black font-semibold block">Product Name </span>
+              <input
+                class="px-3 rounded-lg py-2 border focus:border-amber-700 w-full text-black bg-white"
+                id="name"
+                type="text"
+                placeholder="Name"
+              />
+            </div>
+            <div class="w-full space-y-2">
+              <span class="text-black font-semibold block">Price</span>
+              <input
+                class="px-3 rounded-lg py-2 border focus:border-amber-700 w-full text-black bg-white"
+                id="price"
+                type="text"
+                placeholder="Price"
+              />
+            </div>
+          </div>
+          <div class="w-full space-y-2">
+            <span class="text-black font-semibold block">Img Url </span>
+            <input
+              class="px-3 rounded-lg py-2 border focus:border-amber-700 w-full text-black bg-white"
+              id="imgUrl"
+              type="text"
+              placeholder="Img Url"
+            />
+          </div>
+          <div class="w-full space-y-2">
+            <span class="text-black font-semibold block"
+              >Short Description</span
+            >
+            <textarea
+              class="w-full border h-32 px-3 py-2 rounded-lg"
+              id="shortDescription"
+              placeholder="About Product"
+            ></textarea>
+            <input
+              class="w-full border py-2 rounded-lg bg-amber-400 mt-8 cursor-pointer"
+              type="submit"
+              value="Add Product"
+              id="submit"
+            />
+          </div>
+        </div>
+      </form>
+    </main>
+    <script src="js/addProduct.js"></script>
   </body>
 </html>

@@ -26,17 +26,21 @@
 </head>
 
 <body> 
-    <header class="bg-amber-100 px-4 md:px-32 py-24">
-        <nav class="flex justify-between">
+    <header class="
+    bg-amber-100 lg:py-10 md:py-8 py-4">
+        <nav class="flex justify-between items-center p-3 mx-5 md:mx-16 lg:mx-32 border border-amber-500 rounded-lg bg-orange-200">
             <div>
-                <div>
-                    <!-- <img src="images/penguin.png" alt=""> -->
-                    <h3 class="text-5xl font-bebas"><span class="text-[#fabe4c]">Penguin</span> Fashion</h3>
-                </div>
+                <a href="index.html">  <div class="flex items-center justify-center gap-2">
+                    <img class="w-10" src="images/penguin.png" alt="">
+                    <h3 class="
+                    lg:text-5xl md:text-4xl text-3xl font-bebas"><span class="text-[#fabe4c]">Penguin</span> Fashion</h3>
+                </div></a>
+              
             </div>
             <div class="flex gap-x-6 font-semibold">
                 <a href="index.html">Home</a>
-                <a href="">Product</a>
+                <!-- <a href="updateProduct.html">Update Product</a> -->
+                <a href="addProduct.html">Add Product</a>
                 <a href="cart.html">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
@@ -45,29 +49,33 @@
             </div>
         </nav>
         <!-- banner section -->
-        <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex flex-col-reverse px-4 md:px-16 lg:px-64 gap-20 md:gap-5 md:flex-row justify-between items-center">
             <div class="space-y-3">
                 <h1 class="text-7xl uppercase font-bebas">
                     <span class="text-[#fabe4c] ">Be the Penguins</span>
                     <br>
-                    of Winter</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing 
-                        and typesetting industry.</p>
-                  <a href="#productContainer">      
+                    of Winter
+                </h1>
+                <p>Lorem Ipsum is simply dummy text of the printing 
+                    and typesetting industry.
+                </p>
+                <a href="#productContainer">      
                     <button class="
-                    drop-shadow py-4 px-9 bg-gradient-to-r from-[#A4BC46] to-[#607509] rounded-xl uppercase
-                     text-white font-medium">
-                     <svg xmlns="http://www.w3.org/2000/svg"
-                     fill="none" viewBox="0 0 24 24"
-                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline" >
-                     <path stroke-linecap="round"
-                         stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 
-                         1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3
-                         2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6
-                         20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75
-                         0 0 1 1.5 0Z" />
+                        mt-5 drop-shadow py-4 px-9 bg-gradient-to-r from-[#A4BC46] to-[#607509] rounded-xl uppercase
+                        text-white font-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline" >
+                        <path stroke-linecap="round"
+                            stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 
+                            1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3
+                            2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6
+                            20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75
+                            0 0 1 1.5 0Z" />
 
-                 </svg> Buy Now</button></a>
+                        </svg> Buy Now
+                    </button>
+                </a>
             </div>
             <div>
                 <img src="images/model.png" alt="">
@@ -85,7 +93,7 @@
        
     </main>
     <footer>
-        <section class="flex justify-center border items-center gap-20 p-20 content-center bg-slate-400">
+        <section class="flex flex-col-reverse md:flex-row justify-center border items-center gap-20 lg:p-20 md:p-16 py-10 px-2  content-center bg-slate-400">
             <div>
                 <!-- Shopping cart section -->
                 <div class="flex justify-center items-center gap-5 p-2 ">
@@ -94,7 +102,7 @@
                           </svg>
                           
                     <div>
-                        <h2 class="text-2xl font-bold">Yellow Coat Jacket </h2>
+                        <h2 class="lg:text-2xl md:text-xl font-bold">Yellow Coat Jacket </h2>
                         <p>Lorem Ipsum is simply dummy text of the 
                             printing and typesetting industry.</p>
                     </div>
@@ -105,7 +113,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
                       </svg>
                     <div>
-                        <h2 class="text-2xl font-bold">Yellow Coat Jacket </h2>
+                        <h2 class="lg:text-2xl md:text-xl font-bold">Yellow Coat Jacket </h2>
                         <p>Lorem Ipsum is simply dummy text of the 
                             printing and typesetting industry.</p>
                     </div>
@@ -121,7 +129,7 @@
                           
                     </div>
                     <div>
-                        <h2 class="text-2xl font-bold">Yellow Coat Jacket 3</h2>
+                        <h2 class="lg:text-2xl md:text-xl font-bold">Yellow Coat Jacket 3</h2>
                         <p>Lorem Ipsum is simply dummy text of the 
                             printing and typesetting industry.</p>
                     </div>

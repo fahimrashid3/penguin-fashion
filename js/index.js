@@ -18,7 +18,7 @@ const loadProducts = async () => {
               <img src="${product.img}" alt="Product Image" class="rounded-lg">
   
               <!-- Edit Button -->
-              <button class="absolute top-2 right-2 bg-[#A4BC46] text-white rounded-full p-2 hover:bg-[#85A019]">
+              <button class="updateProduct absolute top-2 right-2 bg-[#A4BC46] text-white rounded-full p-2 hover:bg-[#85A019]">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 3.487l3.651 3.651a1.5 1.5 0 0 1 0 2.121l-9.015 9.015a1.5 1.5 0 0 1-.531.328l-4.728 1.18a.75.75 0 0 1-.917-.917l1.18-4.728a1.5 1.5 0 0 1 .328-.531l9.015-9.015a1.5 1.5 0 0 1 2.121 0z"/>
                 </svg>
@@ -43,6 +43,9 @@ const loadProducts = async () => {
 
       const button = productCart.querySelector(".addToCart");
       button.addEventListener("click", () => addToCart(product));
+
+      const updateButton = productCart.querySelector(".updateProduct");
+      updateButton.addEventListener("click", () => updateProduct(product));
 
       cartField.appendChild(productCart); // Append the product card to the container
     });
@@ -73,6 +76,10 @@ const addToCart = (product) => {
         alert("Order successfully");
       }
     });
+};
+const updateProduct = (product) => {
+  const { productName, price, img } = product;
+  console.log(productName);
 };
 
 // Call the function to load products
