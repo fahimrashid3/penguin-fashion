@@ -13,9 +13,9 @@ const loadProducts = async () => {
     productsData.forEach((product) => {
       const productCart = document.createElement("div");
       productCart.innerHTML = `
-          <div class="space-y-3 drop-shadow-lg border rounded-lg hover:-mt-3 transition-all duration-500">
-            <div class="relative bg-[#F1F1F1] p-5 rounded-2xl">
-              <img src="${product.img}" alt="Product Image" class="rounded-lg">
+          <div class="space-y-3 drop-shadow-lg border rounded-lg hover:-mt-3 transition-all duration-500 ">
+            <div class="relative bg-[#F1F1F1] p-5 rounded-2xl h-[500px]">
+              <img src="${product.img}" alt="Product Image" class="rounded-lg ">
   
               <!-- Edit Button -->
               <button class="updateProduct absolute top-2 right-2 bg-[#A4BC46] text-white rounded-full p-2 hover:bg-[#85A019]">
@@ -45,7 +45,9 @@ const loadProducts = async () => {
       button.addEventListener("click", () => addToCart(product));
 
       const updateButton = productCart.querySelector(".updateProduct");
-      updateButton.addEventListener("click", () => updateProduct(product));
+      updateButton.addEventListener("click", () =>
+        navigateToUpdatePage(product)
+      );
 
       cartField.appendChild(productCart); // Append the product card to the container
     });
@@ -77,10 +79,11 @@ const addToCart = (product) => {
       }
     });
 };
-const updateProduct = (product) => {
-  const { productName, price, img } = product;
-  console.log(productName);
+const navigateToUpdatePage = (product) => {
+  const productIdField = document.getElementById("productId");
+  const { _id } = product;
+  productIdField.innerText = `${_id}`;
+  window.location.href = "updateProduct.html";
 };
 
-// Call the function to load products
 loadProducts();
