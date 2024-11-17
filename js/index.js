@@ -45,9 +45,10 @@ const loadProducts = async () => {
       button.addEventListener("click", () => addToCart(product));
 
       const updateButton = productCart.querySelector(".updateProduct");
-      updateButton.addEventListener("click", () =>
-        navigateToUpdatePage(product)
-      );
+
+      updateButton.addEventListener("click", () => {
+        navigateToUpdatePage(product);
+      });
 
       cartField.appendChild(productCart); // Append the product card to the container
     });
@@ -80,10 +81,12 @@ const addToCart = (product) => {
     });
 };
 const navigateToUpdatePage = (product) => {
-  const productIdField = document.getElementById("productId");
-  const { _id } = product;
-  productIdField.innerText = `${_id}`;
-  window.location.href = "updateProduct.html";
+  if (product && product._id) {
+    window.location.href = `updateProduct.html?productId=${product._id}`;
+  } else {
+    console.error("Invalid product object or missing ID:", product);
+    alert("Invalid product object or missing");
+  }
 };
 
 loadProducts();

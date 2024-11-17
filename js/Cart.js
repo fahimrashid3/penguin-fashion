@@ -14,6 +14,7 @@ const loadOrders = async () => {
   if (orderData && orderData.length > 0) {
     // Loop through each order and create cards
     orderData.forEach((order) => {
+      // create a div and insert the cart in this div
       const orderCart = document.createElement("div");
       orderCart.innerHTML = `
           <div class="flex justify-center items-center gap-5 border-b py-4">
@@ -22,9 +23,14 @@ const loadOrders = async () => {
               <p class="font-semibold">${order.productName}</p>
               <p class="text-gray-500">Price: $${order.price}</p>
             </div>
+
+
+
             <div>
               <button class="deleteOrder bg-red-500 text-white px-4 py-2 rounded-lg">Delete</button>
             </div>
+
+            
           </div>
         `;
 
@@ -48,8 +54,8 @@ const loadOrders = async () => {
 };
 
 // Delete order function
-const deleteOrder = async (id) => {
-  const res = await fetch(`http://localhost:5000/orders/${id}`, {
+const deleteOrder = (id) => {
+  fetch(`http://localhost:5000/orders/${id}`, {
     method: "DELETE",
   })
     .then((res) => res.json())
